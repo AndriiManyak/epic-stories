@@ -1,24 +1,9 @@
 import { GearItem } from "~/components/inventory/gear/GearItem";
 import { GearTypes } from "~/types/gearTypes";
-
-import sword from "~/public/test/sword-icon.svg";
-import backpack from "~/public/test/backpack-icon.svg";
+import { hero } from "~/API/test-data/hero";
 import humanSilhouette from "~/public/inventory/standing-human-body-silhouette.svg";
 import styled from "styled-components";
 import Image from "next/image";
-
-const hero = {
-  gear: {
-    melee: {
-      type: GearTypes.MELEE,
-      image: sword,
-    },
-    backpack: {
-      type: GearTypes.BACKPACK,
-      image: backpack,
-    },
-  },
-};
 
 export const GearComponent = () => {
   return (
