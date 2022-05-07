@@ -1,4 +1,4 @@
-import { GearItem } from "~/components/inventory/GearItem";
+import { GearItem } from "~/components/inventory/gear/GearItem";
 import { GearTypes } from "~/types/gearTypes";
 
 import sword from "~/public/test/sword-icon.svg";

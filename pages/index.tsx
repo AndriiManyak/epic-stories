@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { Inventory } from "~/components/inventory/Inventory";
-import { GearComponent } from "~/components/inventory/GearComponent";
+import { GearComponent } from "~/components/inventory/gear/GearComponent";
 
 const Home: NextPage = () => {
   return (
