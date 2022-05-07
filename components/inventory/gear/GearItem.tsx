@@ -23,6 +23,8 @@ const GearItemContainer = styled.div`
   width: fit-content;
   height: fit-content;
   padding: 5px 0;
+
+  cursor: pointer;
 `;
 
 const GearItemName = styled.p`
