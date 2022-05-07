@@ -7,9 +7,9 @@ import { hero } from "~/API/test-data/hero";
 const Home: NextPage = () => {
   return (
     <div>
+      <InventoryItemDetails item={hero.gear.melee} />
       <Inventory size={25} />
       <GearComponent />
-      <InventoryItemDetails item={hero.gear.melee} />
     </div>
   );
 };

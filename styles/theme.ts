@@ -9,7 +9,6 @@ const theme = {
     tablet: "@media (max-width: 768px)",
     mobile: "@media (max-width: 480px)",
   },
-}
+};
 
 export default theme;
-
