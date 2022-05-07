@@ -18,13 +18,14 @@ export const InventoryItem = ({ itemImage }: Props) => {
           />
         </ImageContainer>
       ) : (
-        <span>empty</span>
+        <EmptyLabel>empty</EmptyLabel>
       )}
     </InventoryContainer>
   );
 };
 
 const InventoryContainer = styled.div`
+  display: flex;
   height: 100%;
   width: 100%;
 
@@ -36,4 +37,8 @@ const ImageContainer = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
+`;
+
+const EmptyLabel = styled.p`
+  margin: auto;
 `;

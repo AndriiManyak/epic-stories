@@ -19,5 +19,5 @@ export const Inventory = ({ size }: Props) => {
 
 const InventoryContainer = styled.div`
   display: grid;
-  grid-template: repeat(5, 50px) / repeat(5, 50px);
+  grid-template: repeat(5, 80px) / repeat(5, 80px);
 `;
