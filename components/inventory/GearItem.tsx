@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { GearTypes } from "~/types/gearTypes";
-import { InventoryItem } from "~/components/invertory/InventoryItem";
+import { InventoryItem } from "~/components/inventory/InventoryItem";
 import { Gear } from "~/types/gearItem";
 
 type Props = {

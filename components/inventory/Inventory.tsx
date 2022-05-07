@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InventoryItem } from "~/components/invertory/InventoryItem";
+import { InventoryItem } from "~/components/inventory/InventoryItem";
 
 type Props = {
   size: number;
