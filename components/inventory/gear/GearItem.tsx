@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { GearTypes } from "~/types/gearTypes";
-import { InventoryItem } from "~/components/inventory/InventoryItem";
-import { Gear } from "~/types/gearItem";
+import { InventoryItemTypes } from "~/types/inventoryItemTypes";
+import { InventoryItem as InventoryItemComponent } from "~/components/inventory/InventoryItem";
+import { InventoryItem } from "~/types/inventoryItem";
 
 type Props = {
-  gearType: GearTypes;
-  gearItem: Gear;
+  gearType: InventoryItemTypes;
+  gearItem: InventoryItem;
 };
 
 export const GearItem = ({ gearType, gearItem }: Props) => {
@@ -13,7 +13,7 @@ export const GearItem = ({ gearType, gearItem }: Props) => {
     <GearItemContainer>
       <GearItemName>{gearType}</GearItemName>
       <GearItemBlock>
-        <InventoryItem itemImage={gearItem?.image} />
+        <InventoryItemComponent itemImage={gearItem?.image} />
       </GearItemBlock>
     </GearItemContainer>
   );

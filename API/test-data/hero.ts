@@ -1,11 +1,11 @@
-import { GearTypes } from "~/types/gearTypes";
+import { InventoryItemTypes } from "~/types/inventoryItemTypes";
 import sword from "~/public/test/sword-icon.svg";
 import backpack from "~/public/test/backpack-icon.svg";
 
 export const hero = {
   gear: {
     melee: {
-      type: GearTypes.MELEE,
+      type: InventoryItemTypes.MELEE,
       image: sword,
       name: "Test sword",
       weight: 20,
@@ -13,7 +13,7 @@ export const hero = {
       characteristics: {},
     },
     backpack: {
-      type: GearTypes.BACKPACK,
+      type: InventoryItemTypes.BACKPACK,
       image: backpack,
       name: "Test backpack",
       weight: 20,

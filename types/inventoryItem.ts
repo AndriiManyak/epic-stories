@@ -1,8 +1,8 @@
-import { GearTypes } from "~/types/gearTypes";
+import { InventoryItemTypes } from "~/types/inventoryItemTypes";
 
-export type Gear = {
+export type InventoryItem = {
   image: string | HTMLImageElement;
-  type: GearTypes;
+  type: InventoryItemTypes;
   weight: number;
   name: string;
   description: string;

@@ -1,5 +1,5 @@
 import { GearItem } from "~/components/inventory/gear/GearItem";
-import { GearTypes } from "~/types/gearTypes";
+import { InventoryItemTypes } from "~/types/inventoryItemTypes";
 import { hero } from "~/API/test-data/hero";
 import humanSilhouette from "~/public/inventory/standing-human-body-silhouette.svg";
 import styled from "styled-components";
@@ -10,25 +10,31 @@ export const GearComponent = () => {
     <GearContainer>
       <GearBlock>
         <GearLine>
-          <GearItem gearType={GearTypes.MELEE} gearItem={hero.gear.melee} />
-          <GearItem gearType={GearTypes.RANGED} gearItem={hero.gear.backpack} />
+          <GearItem
+            gearType={InventoryItemTypes.MELEE}
+            gearItem={hero.gear.melee}
+          />
+          <GearItem
+            gearType={InventoryItemTypes.RANGED}
+            gearItem={hero.gear.backpack}
+          />
         </GearLine>
 
         <GearLine>
           {" "}
           <GearItem
-            gearType={GearTypes.BACKPACK}
+            gearType={InventoryItemTypes.BACKPACK}
             gearItem={hero.gear.backpack}
           />
         </GearLine>
 
         <GearLine>
           <GearItem
-            gearType={GearTypes.BACKPACK}
+            gearType={InventoryItemTypes.BACKPACK}
             gearItem={hero.gear.backpack}
           />
           <GearItem
-            gearType={GearTypes.BACKPACK}
+            gearType={InventoryItemTypes.BACKPACK}
             gearItem={hero.gear.backpack}
           />
         </GearLine>
@@ -45,9 +51,12 @@ export const GearComponent = () => {
 
       <GearBlock>
         <GearLine>
-          <GearItem gearType={GearTypes.MELEE} gearItem={hero.gear.melee} />
           <GearItem
-            gearType={GearTypes.BACKPACK}
+            gearType={InventoryItemTypes.MELEE}
+            gearItem={hero.gear.melee}
+          />
+          <GearItem
+            gearType={InventoryItemTypes.BACKPACK}
             gearItem={hero.gear.backpack}
           />
         </GearLine>
@@ -55,18 +64,18 @@ export const GearComponent = () => {
         <GearLine>
           {" "}
           <GearItem
-            gearType={GearTypes.BACKPACK}
+            gearType={InventoryItemTypes.BACKPACK}
             gearItem={hero.gear.backpack}
           />
         </GearLine>
 
         <GearLine>
           <GearItem
-            gearType={GearTypes.BACKPACK}
+            gearType={InventoryItemTypes.BACKPACK}
             gearItem={hero.gear.backpack}
           />
           <GearItem
-            gearType={GearTypes.BACKPACK}
+            gearType={InventoryItemTypes.BACKPACK}
             gearItem={hero.gear.backpack}
           />
         </GearLine>
