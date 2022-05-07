@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import { Inventory } from "~/components/invertory/Inventory";
-import { Gear } from "~/components/invertory/Gear";
+import { GearComponent } from "~/components/invertory/GearComponent";
 
 const Home: NextPage = () => {
   return (
     <div>
       <Inventory size={25} />
-      <Gear />
+      <GearComponent />
     </div>
   );
 };
