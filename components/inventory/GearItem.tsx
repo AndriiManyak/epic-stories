@@ -13,7 +13,7 @@ export const GearItem = ({ gearType, gearItem }: Props) => {
     <GearItemContainer>
       <GearItemName>{gearType}</GearItemName>
       <GearItemBlock>
-        <InventoryItem itemImage={gearItem.image} />
+        <InventoryItem itemImage={gearItem?.image} />
       </GearItemBlock>
     </GearItemContainer>
   );
