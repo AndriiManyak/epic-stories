@@ -12,12 +12,10 @@ export const InventoryItemComponent = ({ item }: Props) => {
   const [isItemDetailsVisible, setIsItemDetailsVisible] = useState(false);
 
   const showItemDetails = () => {
-    console.log("show");
     setIsItemDetailsVisible(true);
   };
 
   const hideItemDetails = () => {
-    console.log("hide");
     setIsItemDetailsVisible(false);
   };
 
