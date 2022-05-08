@@ -2,7 +2,11 @@ const theme = {
   colors: {
     white: "#fff",
     black: "#000",
+    regularText: "#fff",
+    darkText: "#000",
     primary: "#030d28",
+    lightBackground: "silver",
+    darkBackground: "#000",
     primaryBorder: "silver",
   },
   media: {
