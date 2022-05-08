@@ -2,6 +2,7 @@ const theme = {
   colors: {
     white: "#fff",
     black: "#000",
+    primaryBorder: "silver",
   },
   media: {
     widescreen: "@media (max-width: 1200px)",
