@@ -9,6 +9,7 @@ export const InventoryItemContentMenu = ({ isVisible }: Props) => {
     <Container isVisible={isVisible}>
       <Menu>
         <Option>Take off</Option>
+        <Option>Throw</Option>
       </Menu>
     </Container>
   );
@@ -31,9 +32,14 @@ const Menu = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 10px 0;
+  padding: 5px 0;
 `;
 
 const Option = styled.div`
   padding: 5px 10px;
+
+  &:hover {
+    border-left: 4px solid ${({ theme }) => theme.colors.darkBackground};
+    background: ${({ theme }) => theme.colors.lightBackground};
+  }
 `;
