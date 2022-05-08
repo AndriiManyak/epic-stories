@@ -3,6 +3,7 @@ import { InventoryItemTypes } from "~/types/inventoryItemTypes";
 export type InventoryItemCharacteristics = {
   damage?: number;
   defence?: number;
+  weight_reduction?: number;
 };
 
 export type InventoryItem = {
