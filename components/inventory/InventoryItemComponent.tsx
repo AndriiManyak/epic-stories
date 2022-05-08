@@ -2,7 +2,9 @@ import styled from "styled-components";
 import Image from "next/image";
 import { InventoryItem } from "~/types/inventoryItem";
 import { InventoryItemDetails } from "~/components/inventory/InventoryItemDetails";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { MouseEvent } from "react";
+import { InventoryItemContentMenu } from "~/components/inventory/InventoryItemContentMenu";
 
 type Props = {
   item?: InventoryItem;
@@ -10,6 +12,19 @@ type Props = {
 
 export const InventoryItemComponent = ({ item }: Props) => {
   const [isItemDetailsVisible, setIsItemDetailsVisible] = useState(false);
+  const [isContextMenuVisible, setIsContextMenuVisible] = useState(false);
+
+  useEffect(() => {
+    const handleClick = () => {
+      setIsContextMenuVisible(false);
+    };
+
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   const showItemDetails = () => {
     setIsItemDetailsVisible(true);
@@ -19,16 +34,27 @@ export const InventoryItemComponent = ({ item }: Props) => {
     setIsItemDetailsVisible(false);
   };
 
+  const onContentMenu = (event: MouseEvent) => {
+    event.preventDefault();
+    setIsContextMenuVisible(true);
+  };
+
   return (
     <Container>
       {item ? (
         <ItemContainer
           onMouseEnter={showItemDetails}
           onMouseLeave={hideItemDetails}
+          onContextMenu={onContentMenu}
         >
-          <ItemDetailsWrapper isVisible={isItemDetailsVisible}>
+          <ItemDetailsWrapper
+            isVisible={isItemDetailsVisible && !isContextMenuVisible}
+          >
             <InventoryItemDetails item={item} />
           </ItemDetailsWrapper>
+
+          <InventoryItemContentMenu isVisible={isContextMenuVisible} />
+
           <ImageContainer>
             <Image
               src={item.image}
