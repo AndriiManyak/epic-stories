@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InventoryItem } from "~/components/inventory/InventoryItem";
+import { InventoryItemComponent } from "~/components/inventory/InventoryItemComponent";
 
 type Props = {
   size: number;
@@ -11,7 +11,7 @@ export const Inventory = ({ size }: Props) => {
       {Array(size)
         .fill(1)
         .map((_, index) => (
-          <InventoryItem key={index} />
+          <InventoryItemComponent key={index} />
         ))}
     </InventoryContainer>
   );

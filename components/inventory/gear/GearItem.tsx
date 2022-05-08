@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { InventoryItemTypes } from "~/types/inventoryItemTypes";
-import { InventoryItem as InventoryItemComponent } from "~/components/inventory/InventoryItem";
+import { InventoryItemComponent as InventoryItemComponent } from "~/components/inventory/InventoryItemComponent";
 import { InventoryItem } from "~/types/inventoryItem";
 
 type Props = {
@@ -13,7 +13,7 @@ export const GearItem = ({ gearType, gearItem }: Props) => {
     <GearItemContainer>
       <GearItemName>{gearType}</GearItemName>
       <GearItemBlock>
-        <InventoryItemComponent itemImage={gearItem?.image} />
+        <InventoryItemComponent item={gearItem} />
       </GearItemBlock>
     </GearItemContainer>
   );
