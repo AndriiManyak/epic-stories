@@ -15,16 +15,15 @@ export const GearComponent = () => {
             gearItem={hero.gear.melee}
           />
           <GearItem
-            gearType={InventoryItemTypes.RANGED}
-            gearItem={hero.gear.backpack}
+            gearType={InventoryItemTypes.SHIELD}
+            gearItem={hero.gear.shield}
           />
         </GearLine>
 
         <GearLine>
-          {" "}
           <GearItem
-            gearType={InventoryItemTypes.BACKPACK}
-            gearItem={hero.gear.backpack}
+            gearType={InventoryItemTypes.RANGED}
+            gearItem={hero.gear.ranged}
           />
         </GearLine>
 
@@ -41,42 +40,36 @@ export const GearComponent = () => {
       </GearBlock>
 
       <GearHeroImage>
-        <Image
-          src={humanSilhouette}
-          alt="hero image"
-          objectFit="contain"
-          // layout="fill"
-        />
+        <Image src={humanSilhouette} alt="hero image" objectFit="contain" />
       </GearHeroImage>
 
       <GearBlock>
         <GearLine>
           <GearItem
-            gearType={InventoryItemTypes.MELEE}
-            gearItem={hero.gear.melee}
-          />
-          <GearItem
-            gearType={InventoryItemTypes.BACKPACK}
-            gearItem={hero.gear.backpack}
-          />
-        </GearLine>
-
-        <GearLine>
-          {" "}
-          <GearItem
-            gearType={InventoryItemTypes.BACKPACK}
-            gearItem={hero.gear.backpack}
+            gearType={InventoryItemTypes.HEAD}
+            gearItem={hero.gear.head}
           />
         </GearLine>
 
         <GearLine>
           <GearItem
-            gearType={InventoryItemTypes.BACKPACK}
-            gearItem={hero.gear.backpack}
+            gearType={InventoryItemTypes.CHEST}
+            gearItem={hero.gear.chest}
           />
           <GearItem
-            gearType={InventoryItemTypes.BACKPACK}
-            gearItem={hero.gear.backpack}
+            gearType={InventoryItemTypes.HANDS}
+            gearItem={hero.gear.hands}
+          />
+        </GearLine>
+
+        <GearLine>
+          <GearItem
+            gearType={InventoryItemTypes.LEGS}
+            gearItem={hero.gear.legs}
+          />
+          <GearItem
+            gearType={InventoryItemTypes.BOOTS}
+            gearItem={hero.gear.boots}
           />
         </GearLine>
       </GearBlock>

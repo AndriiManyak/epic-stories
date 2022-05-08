@@ -4,6 +4,7 @@ export type InventoryItemCharacteristics = {
   damage?: number;
   defence?: number;
   weight_reduction?: number;
+  distant?: number;
 };
 
 export type InventoryItem = {

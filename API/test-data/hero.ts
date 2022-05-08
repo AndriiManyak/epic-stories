@@ -1,7 +1,10 @@
 import { InventoryItemTypes } from "~/types/inventoryItemTypes";
+import { Hero } from "~/types/hero";
+
+import shield from "~/public/test/shield-icon.svg";
 import sword from "~/public/test/sword-icon.svg";
 import backpack from "~/public/test/backpack-icon.svg";
-import { Hero } from "~/types/hero";
+import crossbow from "~/public/test/crossbow-icon.svg";
 
 export const hero: Hero = {
   gear: {
@@ -18,7 +21,7 @@ export const hero: Hero = {
     },
     shield: {
       type: InventoryItemTypes.SHIELD,
-      image: backpack,
+      image: shield,
       name: "Shield",
       weight: 20,
       cost: 100,
@@ -36,6 +39,18 @@ export const hero: Hero = {
       description: "test item description",
       characteristics: {
         weight_reduction: 60,
+      },
+    },
+    ranged: {
+      type: InventoryItemTypes.RANGED,
+      image: crossbow,
+      name: "ranged",
+      weight: 20,
+      cost: 100,
+      description: "test item description",
+      characteristics: {
+        distant: 60,
+        damage: 40,
       },
     },
   },

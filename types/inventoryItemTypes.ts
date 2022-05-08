@@ -3,4 +3,9 @@ export enum InventoryItemTypes {
   RANGED = "ranged",
   SHIELD = "shield",
   BACKPACK = "backpack",
+  HEAD = "head",
+  CHEST = "chest",
+  HANDS = "hands",
+  LEGS = "legs",
+  BOOTS = "boots",
 }

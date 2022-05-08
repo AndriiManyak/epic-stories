@@ -5,7 +5,7 @@ import { InventoryItem } from "~/types/inventoryItem";
 
 type Props = {
   gearType: InventoryItemTypes;
-  gearItem: InventoryItem;
+  gearItem?: InventoryItem;
 };
 
 export const GearItem = ({ gearType, gearItem }: Props) => {
