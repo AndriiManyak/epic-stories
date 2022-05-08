@@ -32,11 +32,10 @@ export const InventoryItemDetails = ({ item }: Props) => {
 };
 
 const Container = styled.div`
-  width: fit-content;
-
+  color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.primary};
   padding: 10px;
   border: 2px solid ${({ theme }) => theme.colors.primaryBorder};
-  border-radius: 10px;
 `;
 
 const ItemMainDetails = styled.div`
@@ -48,6 +47,7 @@ const ItemImageWrapper = styled.div`
   margin-right: 10px;
   height: 80px;
   width: 80px;
+  min-width: 80px;
 
   position: relative;
 `;
@@ -56,6 +56,4 @@ const ItemInfoWrapper = styled.div``;
 
 const ItemName = styled.p``;
 
-const ItemDescription = styled.p`
-  max-width: 450px;
-`;
+const ItemDescription = styled.p``;
