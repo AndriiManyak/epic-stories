@@ -11,8 +11,11 @@ export const hero: Hero = {
       name: "Test sword",
       weight: 20,
       cost: 100,
-      description: "test item description",
-      characteristics: {},
+      description:
+        "test item description test item description test item description test item description test item description test item description test item description test item description test item description ",
+      characteristics: {
+        damage: 25,
+      },
     },
     backpack: {
       type: InventoryItemTypes.BACKPACK,
@@ -21,7 +24,9 @@ export const hero: Hero = {
       weight: 20,
       cost: 100,
       description: "test item description",
-      characteristics: {},
+      characteristics: {
+        weight_reduction: 60,
+      },
     },
   },
 };
