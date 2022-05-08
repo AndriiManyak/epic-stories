@@ -1,6 +1,7 @@
 import { InventoryItem } from "~/types/inventoryItem";
 import styled from "styled-components";
 import Image from "next/image";
+import { ItemCharacteristics } from "~/components/inventory/ItemCharacteristics";
 
 type Props = {
   item: InventoryItem;
@@ -25,18 +26,21 @@ export const InventoryItemDetails = ({ item }: Props) => {
         </ItemInfoWrapper>
       </ItemMainDetails>
 
-      <ItemCharacteristics></ItemCharacteristics>
+      <ItemCharacteristics characteristics={item.characteristics} />
     </Container>
   );
 };
 
 const Container = styled.div`
-  padding: 10px;
+  width: fit-content;
 
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  padding: 10px;
+  border: 2px solid ${({ theme }) => theme.colors.primaryBorder};
+  border-radius: 10px;
 `;
 
 const ItemMainDetails = styled.div`
+  margin-bottom: 20px;
   display: flex;
 `;
 
@@ -52,6 +56,6 @@ const ItemInfoWrapper = styled.div``;
 
 const ItemName = styled.p``;
 
-const ItemDescription = styled.p``;
-
-const ItemCharacteristics = styled.div``;
+const ItemDescription = styled.p`
+  max-width: 450px;
+`;
