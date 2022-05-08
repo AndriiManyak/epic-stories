@@ -11,10 +11,20 @@ export const hero: Hero = {
       name: "Test sword",
       weight: 20,
       cost: 100,
-      description:
-        "test item description test item description test item description test item description test item description test item description test item description test item description test item description ",
+      description: `test item description test item description test item description test item description test item description test item description `,
       characteristics: {
         damage: 25,
+      },
+    },
+    shield: {
+      type: InventoryItemTypes.SHIELD,
+      image: backpack,
+      name: "Shield",
+      weight: 20,
+      cost: 100,
+      description: "test item description",
+      characteristics: {
+        defence: 60,
       },
     },
     backpack: {

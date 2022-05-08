@@ -1,8 +1,11 @@
 import { InventoryItem } from "~/types/inventoryItem";
 
+type Gear = {
+  melee: InventoryItem;
+  backpack: InventoryItem;
+  shield: InventoryItem;
+};
+
 export type Hero = {
-  gear: {
-    melee: InventoryItem;
-    backpack: InventoryItem;
-  };
+  gear: Gear;
 };
