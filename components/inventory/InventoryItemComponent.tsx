@@ -30,8 +30,9 @@ export const InventoryItemComponent = ({ item }: Props) => {
     setIsItemDetailsVisible(true);
   };
 
-  const hideItemDetails = () => {
+  const onMouseLeave = () => {
     setIsItemDetailsVisible(false);
+    setIsContextMenuVisible(false);
   };
 
   const onContentMenu = (event: MouseEvent) => {
@@ -44,7 +45,7 @@ export const InventoryItemComponent = ({ item }: Props) => {
       {item ? (
         <ItemContainer
           onMouseEnter={showItemDetails}
-          onMouseLeave={hideItemDetails}
+          onMouseLeave={onMouseLeave}
           onContextMenu={onContentMenu}
         >
           <ItemDetailsWrapper
