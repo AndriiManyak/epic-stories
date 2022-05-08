@@ -2,6 +2,7 @@ const theme = {
   colors: {
     white: "#fff",
     black: "#000",
+    primary: "#030d28",
     primaryBorder: "silver",
   },
   media: {
