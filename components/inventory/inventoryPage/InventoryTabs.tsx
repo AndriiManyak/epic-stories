@@ -4,15 +4,13 @@ import { GearComponent } from "~/components/inventory/gear/GearComponent";
 import { ReactNode, useState } from "react";
 import { Inventory } from "~/components/inventory/Inventory";
 
-const tabs: { icon: string; title: string; content: ReactNode }[] = [
+const tabs: { title: string; content: ReactNode }[] = [
   {
     title: "Gear",
-    icon: "Gear",
     content: <GearComponent />,
   },
   {
     title: "Inventory",
-    icon: "Inventory",
     content: <Inventory size={20} />,
   },
 ];
@@ -30,7 +28,6 @@ export const InventoryTabs = () => {
         {tabs.map((tab, index) => (
           <InventoryTab
             key={index}
-            icon={tab.icon}
             title={tab.title}
             isActive={index === activeTab}
             onClick={() => selectTab(index)}
