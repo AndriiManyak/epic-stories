@@ -1,10 +1,24 @@
-import '~/styles/globals.css'
-import type { AppProps } from 'next/app'
-import {ThemeProvider} from "styled-components";
+import "~/styles/globals.css";
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "styled-components";
 import theme from "~/styles/theme";
+import { ReactElement } from "react";
+import { NextPage } from "next";
+import { WithLayout } from "~/types/withLayout";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <ThemeProvider theme={theme}><Component {...pageProps} /></ThemeProvider>
+type Page<P = Record<string, unknown>> = NextPage<P> & WithLayout;
+
+type Props = AppProps & {
+  Component: Page;
+};
+
+function MyApp({ Component, pageProps }: Props) {
+  const getLayout = Component.getLayout || ((page: ReactElement) => page);
+  return (
+    <ThemeProvider theme={theme}>
+      {getLayout(<Component {...pageProps} />)}
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
