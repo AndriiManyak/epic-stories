@@ -15,30 +15,31 @@ export const InventoryItemDetails = ({ item }: Props) => {
         <ItemInfoWrapper>
           <ItemDescription>{item.description}</ItemDescription>
         </ItemInfoWrapper>
+        <ItemCharacteristics characteristics={item.characteristics} />
       </ItemDetails>
-
-      <ItemCharacteristics characteristics={item.characteristics} />
     </Container>
   );
 };
 
 const Container = styled.div`
-  color: ${({ theme }) => theme.colors.white};
-  background: ${({ theme }) => theme.colors.primary};
-  border: 2px solid ${({ theme }) => theme.colors.primaryBorder};
+  background: ${({ theme }) => theme.colors.white};
 `;
 
 const ItemName = styled.p`
   padding: 5px 10px;
+  color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.darkBackground};
 `;
 
 const ItemDetails = styled.div`
   margin-bottom: 20px;
-  display: flex;
 
+  border: 2px solid ${({ theme }) => theme.colors.black};
   padding: 10px;
 `;
 
-const ItemInfoWrapper = styled.div``;
+const ItemInfoWrapper = styled.div`
+  margin-bottom: 10px;
+`;
 
 const ItemDescription = styled.p``;

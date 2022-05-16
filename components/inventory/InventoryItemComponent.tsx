@@ -62,7 +62,7 @@ const ItemContainer = styled.div`
 `;
 
 const ItemDetailsWrapper = styled.div<{ isVisible: boolean }>`
-  width: 500px;
+  min-width: 400px;
   position: absolute;
   top: 90%;
   left: 90%;
