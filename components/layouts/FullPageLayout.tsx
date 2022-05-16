@@ -7,16 +7,18 @@ type Props = {
   footer?: ReactNode;
 };
 
-export const FullPageLayout = ({ children }: Props) => {
+export const FullPageLayout = ({ children, header, footer }: Props) => {
   return (
     <Layout>
+      {header}
       <Main>{children}</Main>
+      {footer}
     </Layout>
   );
 };
 
 const Layout = styled.div`
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;
