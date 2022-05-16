@@ -26,7 +26,5 @@ const Layout = styled.div`
 `;
 
 const Main = styled.main`
-  display: flex;
-  align-items: stretch;
   flex-grow: 1;
 `;
