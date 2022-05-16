@@ -78,6 +78,7 @@ const Container = styled.div`
   width: 100%;
 
   border: 2px solid ${({ theme }) => theme.colors.black};
+  cursor: pointer;
 `;
 
 const ItemContainer = styled.div`
@@ -89,7 +90,6 @@ const ItemContainer = styled.div`
 `;
 
 const ItemDetailsWrapper = styled.div<{ isVisible: boolean }>`
-  min-width: 400px;
   position: absolute;
   top: 90%;
   left: 90%;
