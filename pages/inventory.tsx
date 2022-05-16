@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import { InventoryPage as InventoryPageComponent } from "~/components/inventory/inventoryPage/InventoryPage";
 import { WithLayout } from "~/types/withLayout";
-import { FullPageLayout } from "~/components/layouts/FullPageLayout";
+import { GameContainerLayout } from "~/components/layouts/GameContainerLayout";
 
 const InventoryPage: NextPage & WithLayout = () => {
   return <InventoryPageComponent />;
 };
 
 InventoryPage.getLayout = (page) => {
-  return <FullPageLayout>{page}</FullPageLayout>;
+  return <GameContainerLayout>{page}</GameContainerLayout>;
 };
 
 export default InventoryPage;
