@@ -11,8 +11,8 @@ const tabs: { icon: string; title: string; content: ReactNode }[] = [
     content: <GearComponent />,
   },
   {
-    title: "Backpack",
-    icon: "Backpack",
+    title: "Inventory",
+    icon: "Inventory",
     content: <Inventory size={20} />,
   },
 ];
