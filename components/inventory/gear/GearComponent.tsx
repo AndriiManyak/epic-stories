@@ -1,9 +1,9 @@
 import { GearItem } from "~/components/inventory/gear/GearItem";
 import { InventoryItemTypes } from "~/types/inventoryItemTypes";
 import { hero } from "~/API/test-data/hero";
-import humanSilhouette from "~/public/inventory/standing-human-body-silhouette.svg";
 import styled from "styled-components";
-import Image from "next/image";
+import { Canvas } from "@react-three/fiber";
+import Model from "~/Model";
 
 export const GearComponent = () => {
   return (
@@ -40,7 +40,20 @@ export const GearComponent = () => {
       </GearBlock>
 
       <GearHeroImage>
-        <Image src={humanSilhouette} alt="hero image" objectFit="contain" />
+        {/*<Image src={humanSilhouette} alt="hero image" objectFit="contain" />*/}
+        <Canvas
+          camera={{ position: [2, 0, 12.25], fov: 15 }}
+          style={{
+            backgroundColor: "#111a21",
+            width: "400px",
+            height: "500px",
+          }}
+        >
+          <ambientLight intensity={1.25} />
+          <ambientLight intensity={0.1} />
+          <directionalLight intensity={0.4} />
+          <Model position={[0.025, -0.9, 0]} />
+        </Canvas>
       </GearHeroImage>
 
       <GearBlock>
@@ -79,6 +92,9 @@ export const GearComponent = () => {
 
 const GearContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 `;
 
 const GearBlock = styled.div`
@@ -95,5 +111,5 @@ const GearLine = styled.div`
 const GearHeroImage = styled.div`
   display: flex;
   align-items: center;
-  justify-self: stretch;
+  justify-self: center;
 `;
