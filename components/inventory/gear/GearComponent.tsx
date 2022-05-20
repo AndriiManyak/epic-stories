@@ -40,7 +40,6 @@ export const GearComponent = () => {
       </GearBlock>
 
       <GearHeroImage>
-        {/*<Image src={humanSilhouette} alt="hero image" objectFit="contain" />*/}
         <Canvas
           camera={{ position: [2, 0, 12.25], fov: 15 }}
           style={{
